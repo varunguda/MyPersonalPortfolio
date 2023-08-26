@@ -37,7 +37,7 @@
       - #SIDEBAR
     -->
 
-    <aside class="sidebar" data-sidebar>
+    <aside class="sidebar">
 
       <div class="sidebar-info">
 
@@ -51,7 +51,7 @@
           <p class="title">Web developer</p>
         </div>
 
-        <button onclick="expandContact()" class="info_more-btn" data-sidebar-btn>
+        <button onclick="expandContact()" class="info_more-btn">
           <span>Show Contacts</span>
 
           <ion-icon name="chevron-down"></ion-icon>
@@ -102,7 +102,7 @@
             <div class="contact-info">
               <p class="contact-title">Birthday</p>
 
-              <time datetime="1982-06-23">Nov 19, 2001</time>
+              <time datetime="2001-11-19">Nov 19, 2001</time>
             </div>
 
           </li>
@@ -128,8 +128,15 @@
         <ul class="social-list">
 
           <li class="social-item">
-            <a href="#" class="social-link">
+            <a href="https://www.linkedin.com/in/varunguda/" target="_blank" class="social-link">
               <ion-icon class = "socials-icons" name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+
+          <li class="social-item">
+            <a href="https://github.com/varunguda" target="_blank" class="social-link">
+              <ion-icon class = "socials-icons" name="logo-github"></ion-icon>
             </a>
           </li>
 
@@ -142,12 +149,6 @@
           <li class="social-item">
             <a href="#" class="social-link">
               <ion-icon class = "socials-icons" name="logo-twitter"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon class = "socials-icons" name="logo-instagram"></ion-icon>
             </a>
           </li>
 
@@ -175,19 +176,19 @@
         <ul class="navbar-list">
 
           <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
+            <button class="navbar-link  active">About</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
+            <button class="navbar-link" >Resume</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Projects</button>
+            <button class="navbar-link" >Projects</button>
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
+            <button class="navbar-link" >Contact</button>
           </li>
 
         </ul>
@@ -202,7 +203,7 @@
         - #ABOUT
       -->
 
-      <article class="about active" data-page="about">
+      <article class="about active" >
 
         <header>
           <h2 class="h2 article-title">About me</h2>
@@ -298,7 +299,7 @@
         - #RESUME
       -->
 
-      <article class="resume" data-page="resume">
+      <article class="resume">
 
         <header>
           <h2 class="h2 article-title">Resume</h2>
@@ -471,7 +472,7 @@
         - #Projects
       -->
 
-      <article class="projects" data-page="projects">
+      <article class="projects" >
 
         <header>
           <h2 class="h2 article-title">Projects</h2>
@@ -482,32 +483,32 @@
           <ul class="filter-list">
 
             <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
+              <button class="active">All</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>React</button>
+              <button>React</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Backend</button>
+              <button>Backend</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Vanilla JS</button>
+              <button>Vanilla JS</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>HTML & CSS</button>
+              <button>HTML & CSS</button>
             </li>
 
           </ul>
 
           <div class="filter-select-box">
 
-            <button class="filter-select" data-select>
+            <button onclick='selectCategory(this)' class="filter-select">
 
-              <div class="select-value" data-selecct-value>Select category</div>
+              <div class="select-value">Select category</div>
 
               <div class="select-icon">
                 <ion-icon name="chevron-down"></ion-icon>
@@ -518,23 +519,23 @@
             <ul class="select-list">
 
               <li class="select-item">
-                <button data-select-item>All</button>
+                <button>All</button>
               </li>
 
               <li class="select-item">
-                <button data-select-item>React</button>
+                <button>React</button>
               </li>
 
               <li class="select-item">
-                <button data-select-item>Backend</button>
+                <button>Backend</button>
               </li>
 
               <li class="select-item">
-                <button data-select-item>Vanilla JS</button>
+                <button>Vanilla JS</button>
               </li>
 
               <li class="select-item">
-                <button data-select-item>HTML & CSS</button>
+                <button>HTML & CSS</button>
               </li>
 
             </ul>
@@ -543,7 +544,7 @@
 
           <ul class="project-list">
 
-            <li class="project-item  active" data-filter-item data-category="react">
+            <li class="project-item  active">
               <div class="project-video">
                 <video style="border-radius: 16px;" width="100%" height="100%" controls poster=
                 "./assets/media/images/project-evrynews.png">>
@@ -562,7 +563,7 @@
 
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web design">
+            <li class="project-item  active">
               <a href="https://github.com/varunguda/E-Notes" target="_blank">
 
                 <figure class="project-img">
@@ -582,7 +583,7 @@
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web design">
+            <li class="project-item  active" >
               <a href="https://github.com/varunguda/EVRYTYM" target="_blank">
 
                 <figure class="project-img">
@@ -603,7 +604,7 @@
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="applications">
+            <li class="project-item  active">
               <a href="https://github.com/varunguda/TodoListUsingJS" target="_blank">
 
                 <figure class="project-img">
@@ -624,7 +625,7 @@
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web design">
+            <li class="project-item  active" >
               <a href="https://github.com/varunguda/FixKart" target="_blank">
 
                 <figure class="project-img">
@@ -658,13 +659,13 @@
         - #CONTACT
       -->
 
-      <article class="contact" data-page="contact">
+      <article class="contact" >
 
         <header>
           <h2 class="h2 article-title">Contact</h2>
         </header>
 
-        <section class="mapbox" data-mapbox>
+        <section class="mapbox">
           <figure>
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60559.055607881884!2d79.11855594228224!3d18.440988886806263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bccd910bcf48931%3A0x4889b0398ed69f07!2sKarimnagar%2C%20Telangana!5e0!3m2!1sen!2sin!4v1692993275038!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </figure>
@@ -674,17 +675,17 @@
 
           <h3 class="h3 form-title">Contact Form</h3>
 
-          <form action="#" class="form" data-form>
+          <form action="#" class="form">
 
             <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required >
 
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+              <input type="email" name="email" class="form-input" placeholder="Email address" required >
             </div>
 
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+            <textarea name="message" class="form-input" placeholder="Your Message" required></textarea>
 
-            <button class="form-btn" type="submit" disabled data-form-btn>
+            <button class="form-btn" type="submit" disabled >
               <ion-icon name="paper-plane"></ion-icon>
               <span>Send Message</span>
             </button>

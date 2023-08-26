@@ -1,14 +1,15 @@
-/*-----------------------------------*\
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
+
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 
 :root {
 
-    /**
-     * colors
-     */
-  
-    /* gradient */
+    /* COLORS AND COLOR GRADIENTS */
   
     --bg-gradient-onyx: linear-gradient(
       to bottom right, 
@@ -56,9 +57,7 @@
     --light-gray-70: hsla(0, 0%, 84%, 0.7);
     --bittersweet-shimmer: hsl(0, 43%, 51%);
   
-    /**
-     * typography
-     */
+    /* TEXT */
   
     /* font-family */
     --ff-poppins: 'Poppins', sans-serif;
@@ -99,19 +98,7 @@
   }
   
   
-  
-  
-  
-  /*-----------------------------------*\
-    #RESET
-  \*-----------------------------------*/
-  
-  *, *::before, *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
+
   a { text-decoration: none; }
   
   li { list-style: none; }
@@ -148,9 +135,7 @@
   
   
   
-  /*-----------------------------------*\
-    #REUSED STYLE
-  \*-----------------------------------*/
+  /* REUSE STYLES */
   
   .sidebar,
   article {
@@ -183,7 +168,7 @@
     box-shadow: var(--shadow-1);
     z-index: 1;
   }
-  /* social-media icons */
+  
   .socials-icons{
     color: var(--orange-yellow-crayola);
   
@@ -246,24 +231,7 @@
     background: var(--text-gradient-yellow);
     border-radius: 3px;
   }
-  
-  .has-scrollbar::-webkit-scrollbar {
-    width: 5px; /* for vertical scrollbar */
-    height: 5px; /* for horizontal scrollbar */
-  }
-  
-  .has-scrollbar::-webkit-scrollbar-track {
-    background: var(--onyx);
-    border-radius: 5px;
-  }
-  
-  .has-scrollbar::-webkit-scrollbar-thumb {
-    background: var(--orange-yellow-crayola);
-    border-radius: 5px;
-  }
-  
-  .has-scrollbar::-webkit-scrollbar-button { width: 20px; }
-  
+
   .content-card {
     position: relative;
     background: var(--border-gradient-onyx);
@@ -288,9 +256,7 @@
   
   
   
-  /*-----------------------------------*\
-    #MAIN
-  \*-----------------------------------*/
+  /* MAIN */
   
   main {
     margin: 15px 12px;
@@ -302,9 +268,7 @@
   
   
   
-  /*-----------------------------------*\
-    #SIDEBAR
-  \*-----------------------------------*/
+  /* SIDEBAR */
   
   .sidebar {
     margin-bottom: 15px;
@@ -446,9 +410,7 @@
   
   
   
-  /*-----------------------------------*\
-    #NAVBAR
-  \*-----------------------------------*/
+  /* NAVBAR */
   
   .navbar {
     position: fixed;
@@ -487,9 +449,7 @@
   
   
   
-  /*-----------------------------------*\
-    #ABOUT
-  \*-----------------------------------*/
+  /* ABOUT */
   
   .about .article-title { margin-bottom: 15px; }
   
@@ -504,9 +464,7 @@
   
   
   
-  /**
-   * #service 
-   */
+  /* SERVICE */
   
   .service { margin-bottom: 35px; }
   
@@ -551,221 +509,12 @@
     line-height: 1.6;
   }
   
-  
-  /**
-   * #testimonials 
-   */
-  
-  .testimonials { margin-bottom: 30px; }
-  
-  .testimonials-title { margin-bottom: 20px; }
-  
-  .testimonials-list {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 15px;
-    margin: 0 -15px;
-    padding: 25px 15px;
-    padding-bottom: 35px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    overscroll-behavior-inline: contain;
-    scroll-snap-type: inline mandatory;
-  }
-  
-  .testimonials-item {
-    min-width: 100%;
-    scroll-snap-align: center;
-  }
-  
-  .testimonials-avatar-box {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(15px, -25px);
-    background: var(--bg-gradient-onyx);
-    border-radius: 14px;
-    box-shadow: var(--shadow-1);
-  }
-  
-  .testimonials-item-title { margin-bottom: 7px; }
-  
-  .testimonials-text {
-    color: var(--light-gray);
-    font-size: var(--fs-6);
-    font-weight: var(--fw-300);
-    line-height: 1.6;
-    display: -webkit-box;
-    line-clamp: 4;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
+
   
   
-  /**
-   * #testimonials-modal
-   */
-  
-  .modal-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow-y: auto;
-    overscroll-behavior: contain;
-    z-index: 20;
-    pointer-events: none;
-    visibility: hidden;
-  }
-  
-  .modal-container::-webkit-scrollbar { display: none; }
-  
-  .modal-container.active {
-    pointer-events: all;
-    visibility: visible;
-  }
-  
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: hsl(0, 0%, 5%);
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    z-index: 1;
-    transition: var(--transition-1);
-  }
-  
-  .overlay.active {
-    opacity: 0.8;
-    visibility: visible;
-    pointer-events: all;
-  }
-  
-  .testimonials-modal {
-    background: var(--eerie-black-2);
-    position: relative;
-    padding: 15px;
-    margin: 15px 12px;
-    border: 1px solid var(--jet);
-    border-radius: 14px;
-    box-shadow: var(--shadow-5);
-    transform: scale(1.2);
-    opacity: 0;
-    transition: var(--transition-1);
-    z-index: 2;
-  }
-  
-  .modal-container.active .testimonials-modal {
-    transform: scale(1);
-    opacity: 1;
-  }
-  
-  .modal-close-btn {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background: var(--onyx);
-    border-radius: 8px;
-    width: 32px;
-    height: 32px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--white-2);
-    font-size: 18px;
-    opacity: 0.7;
-  }
-  
-  .modal-close-btn:hover,
-  .modal-close-btn:focus { opacity: 1; }
-  
-  .modal-close-btn ion-icon { --ionicon-stroke-width: 50px; }
-  
-  .modal-avatar-box {
-    background: var(--bg-gradient-onyx);
-    width: max-content;
-    border-radius: 14px;
-    margin-bottom: 15px;
-    box-shadow: var(--shadow-2);
-  }
-  
-  .modal-img-wrapper > img { display: none; }
-  
-  .modal-title { margin-bottom: 4px; }
-  
-  .modal-content time {
-    font-size: var(--fs-6);
-    color: var(--light-gray-70);
-    font-weight: var(--fw-300);
-    margin-bottom: 10px;
-  }
-  
-  .modal-content p {
-    color: var(--light-gray);
-    font-size: var(--fs-6);
-    font-weight: var(--fw-300);
-    line-height: 1.6;
-  }
-  
-  
-  /**
-   * #clients 
-   */
-  
-  .clients { margin-bottom: 15px; }
-  
-  .clients-list {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 15px;
-    margin: 0 -15px;
-    padding: 25px;
-    padding-bottom: 25px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    overscroll-behavior-inline: contain;
-    scroll-snap-type: inline mandatory;
-    scroll-padding-inline: 25px;
-  }
-  
-  .clients-item {
-    min-width: 50%;
-    scroll-snap-align: start;
-  }
-  
-  .clients-item img {
-    width: 100%;
-    filter: grayscale(1);
-    transition: var(--transition-1);
-  }
-  
-  .clients-item img:hover { filter: grayscale(0); }
-  
-  
-  
-  
-  
-  /*-----------------------------------*\
-    #RESUME
-  \*-----------------------------------*/
+  /* RESUME */
   
   .article-title { margin-bottom: 30px; }
-  
-  
-  /**
-   * education and experience 
-   */
   
   .timeline { margin-bottom: 30px; }
   
@@ -826,9 +575,7 @@
   }
   
   
-  /**
-   * skills 
-   */
+  /* SKILLS */
   
   .skills-title { margin-bottom: 20px; }
   
@@ -867,9 +614,7 @@
   
   
   
-  /*-----------------------------------*\
-    #projects
-  \*-----------------------------------*/
+  /* PROJECTS */
   
   .filter-list { display: none; }
   
@@ -1042,9 +787,8 @@
   
   
   
-  /*-----------------------------------*\
-    #CONTACT
-  \*-----------------------------------*/
+  
+  /* CONTACT */
   
   .mapbox {
     position: relative;
@@ -1149,52 +893,26 @@
   
   
   
-  /*-----------------------------------*\
-    #RESPONSIVE
-  \*-----------------------------------*/
+  /* MEDIA QUERIES FOR RESPONSIVE SITE */
   
-  /**
-   * responsive larger than 450px screen
-   */
+  /* >450px */
   
   @media (min-width: 450px) {
   
-    /**
-     * client
-     */
-  
-    .clients-item { min-width: calc(33.33% - 10px); }
-  
-  
-  
-    /**
-     * #projects, BLOG 
-     */
-  
-    .project-img,
-    .blog-banner-box { height: auto; }
+    .project-img { height: auto; }
   
   }
   
   
   
   
-  
-  /**
-   * responsive larger than 580px screen
-   */
+
+   /* >580px */
   
   @media (min-width: 580px) {
   
-    /**
-     * CUSTOM PROPERTY
-     */
   
     :root {
-  
-      /**
-       * typography
-       */
   
       --fs-1: 32px;
       --fs-2: 24px;
@@ -1207,10 +925,6 @@
     }
   
   
-  
-    /**
-     * #REUSED STYLE
-     */
   
     .sidebar, article {
       width: 520px;
@@ -1237,20 +951,12 @@
   
   
   
-    /**
-     * #MAIN
-     */
-  
     main {
       margin-top: 60px;
       margin-bottom: 100px;
     }
   
-  
-  
-    /**
-     * #SIDEBAR
-     */
+
   
     .sidebar {
       max-height: 180px;
@@ -1293,9 +999,6 @@
   
   
   
-    /**
-     * #NAVBAR
-     */
   
     .navbar { border-radius: 20px 20px 0 0; }
   
@@ -1305,15 +1008,12 @@
   
   
   
-    /**
-     * #ABOUT
-     */
   
     .about .article-title { margin-bottom: 20px; }
   
     .about-text { margin-bottom: 40px; }
   
-    /* service */
+    
   
     .service-item {
       display: flex;
@@ -1330,87 +1030,7 @@
   
     .service-content-box { text-align: left; }
   
-    /* testimonials */
   
-    .testimonials-title { margin-bottom: 25px; }
-  
-    .testimonials-list {
-      gap: 30px;
-      margin: 0 -30px;
-      padding: 30px;
-      padding-bottom: 35px;
-    }
-  
-    .content-card {
-      padding: 30px;
-      padding-top: 25px;
-    }
-  
-    .testimonials-avatar-box {
-      transform: translate(30px, -30px);
-      border-radius: 20px;
-    }
-  
-    .testimonials-avatar-box img { width: 80px; }
-  
-    .testimonials-item-title {
-      margin-bottom: 10px;
-      margin-left: 95px;
-    }
-  
-    .testimonials-text {
-      line-clamp: 2;
-      -webkit-line-clamp: 2;
-    }
-  
-    /* testimonials modal */
-  
-    .modal-container { padding: 20px; }
-  
-    .testimonials-modal {
-      display: flex;
-      justify-content: flex-start;
-      align-items: stretch;
-      gap: 25px;
-      padding: 30px;
-      border-radius: 20px;
-    }
-  
-    .modal-img-wrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .modal-avatar-box {
-      border-radius: 18px;
-      margin-bottom: 0;
-    }
-  
-    .modal-avatar-box img { width: 65px; }
-  
-    .modal-img-wrapper > img {
-      display: block;
-      flex-grow: 1;
-      width: 35px;
-    }
-  
-    /* clients */
-  
-    .clients-list {
-      gap: 50px;
-      margin: 0 -30px;
-      padding: 45px;
-      scroll-padding-inline: 45px;
-    }
-  
-    .clients-item { min-width: calc(33.33% - 35px); }
-  
-  
-  
-    /**
-     * #RESUME
-     */
   
     .timeline-list { margin-left: 65px; }
   
@@ -1425,22 +1045,8 @@
     .skills-item:not(:last-child) { margin-bottom: 25px; }
   
   
+    .project-img { border-radius: 16px; }
   
-    /**
-     * #projects, BLOG
-     */
-  
-    .project-img, .blog-banner-box { border-radius: 16px; }
-  
-    .blog-posts-list { gap: 30px; }
-  
-    .blog-content { padding: 25px; }
-  
-  
-  
-    /**
-     * #CONTACT
-     */
   
     .mapbox {
       height: 380px;
@@ -1469,25 +1075,13 @@
   
   
   
-  /**
-   * responsive larger than 768px screen
-   */
+  /* >768px */
   
   @media (min-width: 768px) {
   
-    /**
-     * REUSED STYLE
-     */
   
     .sidebar, article { width: 700px; }
-  
-    .has-scrollbar::-webkit-scrollbar-button { width: 100px; }
-  
-  
-  
-    /**
-     * SIDEBAR
-     */
+
   
     .contacts-list {
       grid-template-columns: 1fr 1fr;
@@ -1495,33 +1089,8 @@
     }
   
   
-  
-    /**
-     * NAVBAR
-     */
-  
     .navbar-link { --fs-8: 15px; }
   
-  
-  
-    /**
-     * ABOUT
-     */
-  
-    /* testimonials modal */
-  
-    .testimonials-modal {
-      gap: 35px;
-      max-width: 680px;
-    }
-  
-    .modal-avatar-box img { width: 80px; }
-  
-  
-  
-    /**
-     * projects
-     */
   
     .article-title { padding-bottom: 20px; }
   
@@ -1546,15 +1115,10 @@
   
     .filter-item button.active { color: var(--orange-yellow-crayola); }
   
-    /* projects and blog grid */
   
-    .project-list, .blog-posts-list { grid-template-columns: 1fr 1fr; }
-  
+    .project-list { grid-template-columns: 1fr 1fr; }
   
   
-    /**
-     * CONTACT
-     */
   
     .input-wrapper { grid-template-columns: 1fr 1fr; }
   
@@ -1568,22 +1132,12 @@
   
   
   
-  
-  /**
-   * responsive larger than 1024px screen
-   */
+  /* >1024px */
   
   @media (min-width: 1024px) {
   
-    /**
-     * CUSTOM PROPERTY
-     */
   
     :root {
-  
-      /**
-      * shadow
-      */
   
       --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.125);
       --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.125);
@@ -1593,20 +1147,12 @@
   
   
   
-    /**
-     * REUSED STYLE
-     */
-  
     .sidebar, article {
       width: 950px;
       box-shadow: var(--shadow-5);
     }
   
   
-  
-    /**
-     * MAIN 
-     */
   
     main { margin-bottom: 60px; }
   
@@ -1616,11 +1162,6 @@
       margin: auto;
     }
   
-  
-  
-    /**
-     * NAVBAR
-     */
   
     .navbar {
       position: absolute;
@@ -1641,58 +1182,22 @@
   
     .navbar-link { font-weight: var(--fw-500); }
   
-  
-  
-    /**
-     * ABOUT
-     */
-  
-    /* service */
-  
     .service-list {
       grid-template-columns: 1fr 1fr;
       gap: 20px 25px;
     }
   
-    /* testimonials */
-  
-    .testimonials-item { min-width: calc(50% - 15px); }
-  
-    /* clients */
-  
-    .clients-item { min-width: calc(25% - 38px); }
-  
-  
-  
-    /**
-     * projects
-     */
-  
     .project-list { grid-template-columns: repeat(3, 1fr); }
-  
-  
-  
-    /**
-     * BLOG
-     */
-  
-    .blog-banner-box { height: 230px; }
   
   }
   
   
   
   
-  
-  /**
-   * responsive larger than 1250px screen
-   */
-  
+  /* >1250px */
+
   @media (min-width: 1250px) {
   
-    /**
-     * RESET
-     */
   
     body::-webkit-scrollbar { width: 20px; }
   
@@ -1711,20 +1216,12 @@
     body::-webkit-scrollbar-button { height: 60px; }
   
   
-  
-    /**
-     * REUSED STYLE
-     */
-  
+
     .sidebar, article { width: auto; }
   
     article { min-height: 100%; }
   
   
-  
-    /**
-     * MAIN
-     */
   
     main {
       max-width: 1200px;
@@ -1740,12 +1237,6 @@
       width: 75%;
       margin: 0;
     }
-  
-  
-  
-    /**
-     * SIDEBAR
-     */
   
     .sidebar {
       position: sticky;
@@ -1795,11 +1286,6 @@
   
     .social-list { justify-content: center; }
   
-  
-  
-    /**
-       * RESUME
-       */
   
     .timeline-text { max-width: 700px; }
   
